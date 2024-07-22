@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .markdown-preview {
+      width: 70% !important;
+      margin: auto;
+    }
+  </style>
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Index Page</title>
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            fetch('Multithreading.html')
+              .then((response) => response.text())
+              .then((data) => {
+                document.getElementById('page-content').innerHTML = data;
+              })
+              .catch((error) => console.error('Error loading page:', error));
+          });
+        </script>
+      </head>
+      <body>
+        <div id="page-content"></div>
+      </body>
+    </html>
+  </body>
+</html>
